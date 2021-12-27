@@ -1,0 +1,235 @@
+<div class="page-banner home-banner" *ngIf="router.url == '/funds'">
+    <div class="container h-100">
+
+      <div class="row align-items-center h-100">
+            <div class="col-lg-6 py-3 wow fadeInUp">
+                <table class="fund-table">
+                    <!-- <tr> -->
+                        <tr *ngFor="let fund of funds">
+                            <td class="fund_funds">
+                            <a [routerLink]="['/funds', fund.id]">{{fund.name}}</a>
+                            </td>
+                            <!-- <td class="fund-delete">
+                            <button (click)="deleteFund(fund.id)">Delete</button>
+                            </td> -->
+                        </tr>
+                    <!-- </tr> -->
+                </table>
+            </div>
+
+        <div class="col-lg-6 py-3 wow zoomIn">
+          <div class="img-place">
+            <div class="container2">
+                <table>
+                    <tr>
+                        <td class="first-cell">
+                            Name
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'name' type="string" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Ticker
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'ticker' type="string" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Asset Class
+                        </td>
+                        <td class="first-cell">
+                        <input [(ngModel)]= 'assetclass' type="string" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Expense Ratio
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'expenseratio' type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Price
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'price' type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Dollar Change
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'change1' type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Percent Change
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'change2' type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            SEC Yield
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'secyield' type="number" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            YTD
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'ytd' type="number" />
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Yr1
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'yr1' type="number" />
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Yr5
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'yr5' type="number" />
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Yr10
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'yr10' type="number" />
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td class="first-cell">
+                            Yr Inception
+                        </td>
+                        <td>
+                            <input [(ngModel)]= 'yrinception' type="number" />
+                        </td>   
+                    </tr>
+                    <!-- <tr> -->
+                        <!-- <td class="postFund"> -->
+                            
+                        <!-- </td> -->
+                        
+                    <!-- </tr> -->
+                </table>
+                <div class="postButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" (click)="postFund()">Add Fund</button>
+                </div>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+<!-- <div *ngFor="let fund of funds">
+    <app-fund [fund] = "fund"></app-fund>
+    <a [routerLink]="['/funds', fund.id]">{{fund.title}}</a>
+    
+    <button (click)="deleteFund(fund.id)">Delete</button>
+</div> -->
+<!-- <div class="container2">
+    <table>
+        <tr>
+            <td>
+                Title
+            </td>
+            <td>
+                <input [(ngModel)]= 'bookTitle' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Subtitle
+            </td>
+            <td>
+                <input [(ngModel)]= 'subtitle' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Author
+            </td>
+            <td>
+            <input [(ngModel)]= 'author' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Published
+            </td>
+            <td>
+                <input [(ngModel)]= 'published' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Publisher
+            </td>
+            <td>
+                <input [(ngModel)]= 'publisher' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Pages
+            </td>
+            <td>
+                <input [(ngModel)]= 'pages' type="number" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Description
+            </td>
+            <td>
+                <input [(ngModel)]= 'description' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Website
+            </td>
+            <td>
+                <input [(ngModel)]= 'website' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Price
+            </td>
+            <td>
+                <input [(ngModel)]= 'price' type="number" />
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                <button (click)="postFund()">Add Fund</button>
+            </td>
+            
+        </tr>
+    </table>
+</div> -->

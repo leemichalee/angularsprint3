@@ -1,0 +1,71 @@
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-float">
+      <div class="container">
+
+        <a href="https://investor.vanguard.com/corporate-portal/" target="_blank" class="navbar-brand">
+          <img src="../assets/Vanguard.png" height="25px" alt="">
+          <!-- Real -->
+          <!-- <span class="text-primary">Funds</span> -->
+        </a>
+
+        <a routerLink="/" class="nav-link">Home</a>
+
+        <a routerLink="/funds" class="nav-link">Mutual Funds</a>
+
+        <div class="navbar-collapse collapse" id="navbarContent">
+          <!-- <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
+            <li class="nav-item active">
+              <a routerLink="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/funds" class="nav-link">Funds</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="blog.html" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+          </ul> -->
+
+          <div class="ml-auto">
+            <a href="https://github.com/leemichalee" target="_blank" class="btn btn-outline rounded-pill">Github</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="page-banner home-banner" *ngIf="router.url == '/'">
+      <div class="container h-100">
+
+        <div class="row align-items-center h-100">
+
+          <div class="col-lg-6 py-3 wow fadeInUp">
+            <h1 class="mb-4">Mutual Funds</h1>
+            <p class="text-lg mb-5">Let us do some of the work for you. High-quality, low cost mutual funds that fit your needs.</p>
+
+            <a href="https://investor.vanguard.com/investment-products/mutual-funds" target="_blank" class="btn btn-outline border text-secondary">More Info</a>
+          </div>
+
+          <div class="col-lg-6 py-3 wow zoomIn">
+            <div class="img-place">
+              <img src="../assets/3125760.jpg" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <hr>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+</body>
+

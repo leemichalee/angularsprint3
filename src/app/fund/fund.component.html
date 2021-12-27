@@ -1,0 +1,167 @@
+<div class="container h-100">
+<div class="row align-items-center h-100">
+<div class="col-lg-6 py-3 wow zoomIn">
+<div class="img-place">
+    <table class="table">
+        <tr>
+            <td width=400px>
+                Name
+            </td>
+            <td>
+                {{fund.name}}
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'name' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ticker
+            </td>
+            <td>
+                {{fund.ticker}}
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'ticker' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Asset Class
+            </td>
+            <td>
+                {{fund.assetclass}}
+            </td>
+            <td class="last-cell">
+            <input [(ngModel)]= 'assetclass' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Expense Ratio
+            </td>
+            <td>
+                {{fund.expenseratio}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'expenseratio' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Price
+            </td>
+            <td>
+                ${{fund.price}}
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'price' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dollar Change
+            </td>
+            <td>
+                ${{fund.change1}}
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'change1' type="number" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Percent Change
+            </td>
+            <td>
+                {{fund.change2}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'change2' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                SEC Yield
+            </td>
+            <td>
+                {{fund.secyield}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'secyield' type="string" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                YTD
+            </td>
+            <td>
+                {{fund.ytd}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'ytd' type="number" />
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                Average 1 Year Return
+            </td>
+            <td>
+                {{fund.yr1}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'yr1' type="number" />
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                Average 5 Year Return
+            </td>
+            <td>
+                {{fund.yr5}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'yr5' type="number" />
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                Average 10 Year Return
+            </td>
+            <td>
+                {{fund.yr10}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'yr10' type="number" />
+            </td>   
+        </tr>
+        <tr>
+            <td>
+                Average Return since Inception
+            </td>
+            <td>
+                {{fund.yrinception}}%
+            </td>
+            <td class="last-cell">
+                <input [(ngModel)]= 'yrinception' type="number" />
+            </td>   
+        </tr>
+        <!-- <tr>
+            <td>
+                <button (click)="putFund(fund.id)">Change Fund</button>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                <button (click)="deleteFund(fund.id)">Delete Fund</button>
+            </td>
+            
+        </tr> -->
+    </table>
+    <button class="btn btn-primary"(click)="putFund(fund.id)">Change Fund</button> &nbsp;
+    <button class="btn btn-primary"(click)="deleteFund(fund.id)">Delete Fund</button>
+</div>
+</div>
+</div>
+</div>
